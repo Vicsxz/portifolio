@@ -4,45 +4,42 @@ function App() {
   return (
     <>
       <Navbar />
-
-      {/* Container geral */}
-      <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen w-full">
-        
-        {/* Bloco de texto */}
-        <div className="flex justify-center items-center p-6 md:p-12">
-          <div className="flex flex-col items-start text-start max-w-2xl">
-            <p className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900">
+      
+      <main className="min-h-screen md:grid md:grid-cols-2">
+        {/* Text Content */}
+        <section className="flex flex-col justify-center p-6 md:p-12">
+          <div className="mx-auto max-w-2xl">
+            <h1 className="text-3xl font-bold text-gray-900 md:text-5xl">
               OI, MEU NOME É VICTOR!
-            </p>
-            <p className="mt-2 text-xl sm:text-2xl md:text-4xl">
+            </h1>
+            <p className="mt-3 text-xl md:mt-4 md:text-4xl">
               Eu sou um{" "}
-              <span className="text-[#F0944F] font-semibold">
+              <span className="font-semibold text-[#F0944F]">
                 desenvolvedor de sistemas
               </span>
             </p>
-
-            {/* Introdução ao portfólio */}
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+            <p className="mt-4 text-gray-700 md:mt-6 md:text-xl">
               Bem-vindo ao meu portfólio. Aqui você encontrará projetos que
               demonstram minhas habilidades e competências como desenvolvedor!
             </p>
+            
+            {/* Mobile Image */}
+            <div className="mt-8 flex justify-center md:hidden">
+              <img
+                src="imagem teste.jpg"
+                alt="Victor - Desenvolvedor de Sistemas"
+                className="h-30 w-30 rounded-full object-cover"
+              />
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Bloco da imagem */}
-        <div className="flex justify-center items-center gap-6 p-6 md:p-12">
-          <img
-            src="gatoVoando.png"
-            alt="Logo gato voando"
-            className="w-1/2 sm:w-1/3 md:w-1/5 object-contain"
-          />
-          <img
-            src="computador.png"
-            alt="Logo computador"
-            className="w-2/3 sm:w-1/2 md:w-2/5 object-contain"
-          />
-        </div>
-      </div>
+        {/* Desktop Image */}
+        <section 
+          className="hidden bg-cover bg-center md:block"
+          style={{ backgroundImage: "url('imagem teste.jpg')" }}
+        />
+      </main>
     </>
   );
 }

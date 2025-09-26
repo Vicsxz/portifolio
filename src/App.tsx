@@ -6,7 +6,8 @@ function App() {
     <>
       <Navbar />
       <main>
-        <div className="min-h-fit md:min-h-screen pb-1 md:grid md:grid-cols-2">
+        {/* Seção Início */}
+        <div id="inicio" className="min-h-fit md:min-h-screen pb-1 md:grid md:grid-cols-2">
           {/* Text Content */}
           <section className="flex flex-col justify-center p-6 md:p-12">
             <div className="mx-auto max-w-2xl">
@@ -42,7 +43,8 @@ function App() {
           />
         </div>
 
-        <div className="flex min-h-screen items-center justify-center p-6 md:p-12">
+        {/* Seção Projetos */}
+        <div id="projetos" className="flex min-h-screen items-center justify-center p-6 md:p-12">
           <div className="grid w-full grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Card
               imageUrl="https://images.unsplash.com/photo-1551650975-87deedd944c3"

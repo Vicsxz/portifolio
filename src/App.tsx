@@ -1,13 +1,15 @@
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
+
       <main>
         {/* Seção Início */}
-        <div id="inicio" className="min-h-fit md:min-h-screen pb-1 md:grid md:grid-cols-2">
+        <div id="inicio" className="min-h-fit md:min-h-screen pb-1 md:grid md:grid-cols-2 ">
           {/* Text Content */}
           <section className="flex flex-col justify-center p-6 md:p-12">
             <div className="mx-auto max-w-2xl">
@@ -64,6 +66,8 @@ function App() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

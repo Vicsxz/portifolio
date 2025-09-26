@@ -11,25 +11,28 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
   const menuItems: MenuItem[] = [
     { id: "inicio", label: "Início" },
-    { id: "projetos", label: "Projetos" }
+    { id: "projetos", label: "Projetos" },
   ];
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
       rootMargin: "-50% 0px -50% 0px",
-      threshold: 0
+      threshold: 0,
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
 
     // Observar as seções reais
     const inicioSection = document.getElementById("inicio");
@@ -50,29 +53,28 @@ const Navbar = () => {
       // Rola para a seção com offset para considerar a navbar fixa
       const navbarHeight = 64;
       const sectionTop = section.offsetTop - navbarHeight;
-      
+
       window.scrollTo({
         top: sectionTop,
-        behavior: "smooth"
+        behavior: "smooth",
       });
       setIsOpen(false);
     }
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-gray-50 py-2">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
-          
           <div className="text-xl font-bold text-[#F0944F]">{"<Victor />"}</div>
 
           {/* Desktop */}
-          <div className="hidden sm:flex gap-6">
-            {menuItems.map(item => (
+          <div className="hidden gap-6 sm:flex">
+            {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium hover:text-[#F0944F] transition-colors ${
+                className={`font-medium transition-colors hover:text-[#F0944F] ${
                   activeSection === item.id ? "text-[#F0944F]" : "text-gray-700"
                 }`}
               >
@@ -82,22 +84,19 @@ const Navbar = () => {
           </div>
 
           {/* Mobile */}
-          <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="sm:hidden p-2"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2 sm:hidden">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="sm:hidden flex flex-col gap-4 pb-4">
-            {menuItems.map(item => (
+          <div className="flex flex-col gap-4 pb-4 sm:hidden">
+            {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium hover:text-[#F0944F] transition-colors text-left ${
+                className={`text-left font-medium transition-colors hover:text-[#F0944F] ${
                   activeSection === item.id ? "text-[#F0944F]" : "text-gray-700"
                 }`}
               >

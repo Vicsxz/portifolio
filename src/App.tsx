@@ -6,7 +6,7 @@ function App() {
     <>
       <Navbar />
       <main>
-        <div className="min-h-screen pb-1 md:grid md:grid-cols-2">
+        <div className="min-h-fit md:min-h-screen pb-1 md:grid md:grid-cols-2">
           {/* Text Content */}
           <section className="flex flex-col justify-center p-6 md:p-12">
             <div className="mx-auto max-w-2xl">

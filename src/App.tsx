@@ -33,7 +33,7 @@ function App() {
               {/* Mobile Image */}
               <div className="mt-8 flex justify-center md:hidden">
                 <img
-                  src="imagem teste.jpg"
+                  src="imagem para o portifolio.png"
                   alt="Victor - Desenvolvedor de Sistemas"
                   className="h-30 w-30 rounded-full object-cover"
                 />
@@ -44,7 +44,7 @@ function App() {
           {/* Desktop Image */}
           <section
             className="hidden bg-cover bg-center md:block"
-            style={{ backgroundImage: "url('imagem teste.jpg')" }}
+            style={{ backgroundImage: "url('imagem para o portifolio.png')" }}
           />
         </div>
 

@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex space-x-6">
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/seu-perfil"
+              href="https://www.linkedin.com/in/victor-hugo-barreto-magalhães-726aa4350"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 transition-colors hover:text-[#F0944F]"
@@ -22,7 +22,7 @@ const Footer = () => {
 
             {/* GitHub */}
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/Vicsxz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 transition-colors hover:text-[#F0944F]"

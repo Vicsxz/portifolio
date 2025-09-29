@@ -51,8 +51,20 @@ function App() {
         {/* Seção Projetos */}
         <div
           id="projetos"
-          className="flex min-h-screen items-center justify-center p-6 md:p-12"
+          className="flex min-h-screen flex-col justify-center p-6 md:p-12"
         >
+          {/* Título e Subtítulo */}
+          <div className="mb-10 p-0 md:p-5 justify-center">
+            <p className="text-3xl font-bold text-gray-900 md:text-5xl">
+              Aqui estão meus projetos, aposto que você <span className="text-[#F0944F]">vai gostar!</span>
+            </p>
+
+            <p className="mt-3 text-2xl text-gray-700 md:text-3xl">
+              ou não... mas já que eu consegui sua atenção que tal?
+            </p>
+          </div>
+
+          {/* Grid de Cards */}
           <div className="grid w-full grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Card
               imageUrl="https://images.unsplash.com/photo-1551650975-87deedd944c3"
